@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /*css reset*/
+    *{
+        margin: 0;
+    }
+
+    /*variables*/
+    :root{
+        /*spacing*/
+        --spacing-small:8px;
+        --spacing-medium:12px;
+        --spacing-medium-pluss:16px;
+        --spacing-large:24px;
+        --spacing-larger:48px;
+    }
+    body{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /*main css*/
+    header{
+        width: 100%;
+        height: var(--spacing-larger);
+        margin-top: var(--spacing-medium);
+        margin-bottom: var(--spacing-medium);;
+        border: 1px black solid;
+        background-color: aqua;
+    }
+    main{
+        margin-top: var(--spacing-small);
+        margin-bottom: var(--spacing-small);
+        
+        border: 1px black solid;
+    }
+    footer{
+        border: 1px black solid;
+        width: 100%;
+        height: var(--spacing-larger);
+        margin-top: auto;
+    }
+  </style>
+  <body>
+    <header>Header</header>
+    <main>
+        <section>Hero</section>
+        <section>Beskrivelse</section>
+        <section>TL;DR</section>
+
+    </main>
+    <footer>Footer</footer>
+  </body>
+</html>
