@@ -7,53 +7,229 @@
   </head>
   <style>
     /*css reset*/
-    *{
-        margin: 0;
+    * {
+      margin: 0;
     }
 
     /*variables*/
-    :root{
-        /*spacing*/
-        --spacing-small:8px;
-        --spacing-medium:12px;
-        --spacing-medium-pluss:16px;
-        --spacing-large:24px;
-        --spacing-larger:48px;
+    :root {
+      /*spacing*/
+      --spacing-small: 8px;
+      --spacing-medium: 12px;
+      --spacing-medium-pluss: 16px;
+      --spacing-large: 24px;
+      --spacing-larger: 48px;
+
+      /*colors*/
+
+      --neutral-100: #f2f2f2;
+      --neutral-200: #e6e6e6;
+      --neutral-300: #cccccc;
+      --neutral-400: #b3b3b3;
+      --neutral-500: #999999;
+      --neutral-600: #808080;
+      --neutral-700: #737373;
+      --neutral-800: #666666;
+      --neutral-900: #4d4d4d;
+      --neutral-300-trans: #ccccccb3;
     }
-    body{
+    body {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      background-color: var(--neutral-200);
+      font-family: Arial, Helvetica, sans-serif;
     }
     /*main css*/
-    header{
-        width: 100%;
-        height: var(--spacing-larger);
-        margin-top: var(--spacing-medium);
-        margin-bottom: var(--spacing-medium);;
-        border: 1px black solid;
-        background-color: aqua;
+    header {
+      width: 100%;
+      height: var(--spacing-larger);
+      margin-bottom: var(--spacing-medium);
+      border: 1px black solid;
+      background-color: var(--neutral-100);
     }
-    main{
-        margin-top: var(--spacing-small);
-        margin-bottom: var(--spacing-small);
-        
-        border: 1px black solid;
+
+    main {
+      background-color: var(--neutral-100);
     }
-    footer{
-        border: 1px black solid;
-        width: 100%;
-        height: var(--spacing-larger);
-        margin-top: auto;
+
+    #heroSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 30em;
+      background-image: url(https://picsum.photos/1688/480?blur=4&grayscale);
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+    }
+    #heroContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 0.5em;
+      border: 1px black solid;
+      box-shadow: 2px 4px 10px var(--neutral-700);
+      background-color: var(--neutral-300-trans);
+      padding: var(--spacing-large);
+    }
+    .standardWidthCard {
+      min-height: 5em;
+      width: 75em;
+    }
+    h1 {
+      font-size: 3em;
+      text-align: center;
+    }
+    footer {
+      border: 1px black solid;
+      width: 100%;
+      height: var(--spacing-larger);
+      margin-top: auto;
+    }
+    .subHeader {
+      font-size: larger;
+      font-weight: bold;
+    }
+
+
+    
+    #personalSection{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--neutral-300);
+      min-height: 20em;
+    }
+
+    #personalSection>article{
+      background-color: var(--neutral-100);
+      padding: 0.5em;
+      margin-top: -1em;
+
+      
+      border-radius: 0.5em;
+      box-shadow: 2px 4px 10px var(--neutral-700);
+  }
+
+
+
+    #portfolioSection {
+      padding: var(--spacing-medium);
+      display: flex;
+      justify-content: center;
+    }
+    #portfolioContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--spacing-medium-pluss);
+      justify-items: center;
+    }
+    #portfolioContainer > h1 {
+      grid-column: 1/-1;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--neutral-100);
+      height: 25em;
+      width: 20em;
+      border-radius: 0.5em;
+      gap: var(--spacing-small);
+      box-shadow: 2px 4px 10px var(--neutral-700);
+    }
+    .cardHeader {
+      padding: var(--spacing-small);
+      border-bottom: solid 0.5px var(--neutral-800);
+    }
+    .cardContent {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-small);
+      padding: 0 var(--spacing-small);
+    }
+    .cardImage{
+      width: 100%;
+      height: 10em;
     }
   </style>
   <body>
     <header>Header</header>
     <main>
-        <section>Hero</section>
-        <section>Beskrivelse</section>
-        <section>TL;DR</section>
-
+      <section id="heroSection">
+        <div id="heroContent" class="standardWidthCard">
+          <h1>Hero</h1>
+          <p class="subHeader">
+            Grafisk designer, webutvikler, fornt-end developer
+          </p>
+        </div>
+      </section>
+      <section id="personalSection">
+        <article class="standardWidthCard">
+          <h2>Om meg</h2>
+          <p>Jeg tar en master i multimedia og læringsteknologi</p>
+        </article>
+      </section>
+      <section id="portfolioSection">
+        <article id="portfolioContainer" class="standardWidthCard">
+          <h1>Tidligere prosjekter</h1>
+          <div class="card">
+            <h2 class="cardHeader">Prosjekt 1</h2>
+            <div class="cardContent">
+              <img src="https://picsum.photos/seed/picsum/300/160" alt="" class="cardImage">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                similique enim minima voluptatibus. Voluptate assumenda voluptas
+                magnam at molestiae nobis. Nostrum et dicta porro, quibusdam
+                consectetur iusto hic id vitae.
+              </p>
+              <a href="#">Se Prosjekt -></a>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="cardHeader">Prosjekt 2</h2>
+            <div class="cardContent">
+              <img src="https://picsum.photos/seed/picsum/300/160" alt="" class="cardImage">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                similique enim minima voluptatibus. Voluptate assumenda voluptas
+                magnam at molestiae nobis. Nostrum et dicta porro, quibusdam
+                consectetur iusto hic id vitae.
+              </p>
+              <a href="#">Se Prosjekt -></a>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="cardHeader">Prosjekt 3</h2>
+            <div class="cardContent">
+              <img src="https://picsum.photos/seed/picsum/300/160" alt="" class="cardImage">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                similique enim minima voluptatibus. Voluptate assumenda voluptas
+                magnam at molestiae nobis. Nostrum et dicta porro, quibusdam
+                consectetur iusto hic id vitae.
+              </p>
+              <a href="#">Se Prosjekt -></a>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="cardHeader">Prosjekt 4</h2>
+            <div class="cardContent">
+              <img src="https://picsum.photos/seed/picsum/300/160" alt="" class="cardImage">
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum
+                similique enim minima voluptatibus. Voluptate assumenda voluptas
+                magnam at molestiae nobis. Nostrum et dicta porro, quibusdam
+                consectetur iusto hic id vitae.
+              </p>
+              <a href="#">Se Prosjekt -></a>
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
     <footer>Footer</footer>
   </body>
