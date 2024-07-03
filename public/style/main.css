@@ -6,7 +6,9 @@
   --CTA-color: #674afc;
   --Text-color: #efefef;
   --navbar-color: #34014c;
+  --shadow-color: #5e0089;
 }
+
 body {
   background-color: var(--Primary-color);
   color: var(--Text-color);
@@ -18,6 +20,9 @@ p {
   font-style: normal;
   font-weight: 400;
 }
+h2 {
+  margin: 8px 0;
+}
 button {
   font-size: 24px;
   font-weight: bold;
@@ -28,35 +33,46 @@ button {
   min-width: 184px;
   min-height: 48px;
 }
-main {
-  display: grid;
-  grid-template-columns: 80px 80px 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "sideMenu blank heroSection"
-    "sideMenu blank content1"
-    "sideMenu blank content2"
-    "sideMenu blank content3"
-    "sideMenu blank content4"
-    "sideMenu blank content5"
-    "sideMenu blank content6";
-  gap: 10px;
-}
-main > section{
 
-    margin-top: 100px;
-    margin-right: 100px;
+main {
+  display: flex;
+  gap: 80px;
+}
+footer {
+  min-height: 100px;
+  padding: 16px;
+  padding-left: 85px;
+  background-color: var(--navbar-color);
+  z-index: 1;
 }
 #sideMenu {
   background-color: var(--navbar-color);
-  grid-area: sideMenu;
+  width: 80px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 16px;
+  box-shadow: 4px -14px 20px var(--shadow-color);
+  border-right: 1px var(--shadow-color) solid;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-right: 100px;
+  min-width: 1180px;
+  width: 100%;
+}
+#content:last-child{
+    margin-bottom: 50px;
 }
 #heroSection {
-  grid-area: heroSection;
   display: flex;
   flex-direction: row;
-  min-width: 1180px;
   justify-content: space-between;
+  width: 100%;
+  margin-top: 100px;
 }
 #mainImage {
   min-width: 590px;
@@ -84,21 +100,16 @@ main > section{
   font-size: 86px;
   font-weight: bolder;
 }
-section:nth-of-type(2) {
-  grid-area: content1;
+
+#programSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-section:nth-of-type(3) {
-  grid-area: content2;
-}
-section:nth-of-type(4) {
-  grid-area: content3;
-}
-section:nth-of-type(5) {
-  grid-area: content4;
-}
-section:nth-of-type(6) {
-  grid-area: content5;
-}
-section:nth-of-type(7) {
-  grid-area: content6;
+
+#programSection > div > span {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
 }
