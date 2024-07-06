@@ -106,7 +106,9 @@ footer {
   flex-direction: column;
   gap: 16px;
 }
-
+#programSection > div {
+  border: black solid 1px;
+}
 #programSection > div > span {
   display: flex;
   flex-direction: row;

@@ -1,0 +1,76 @@
+
+#cardsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .projectCard{
+    position: relative;
+    min-height: 35em;
+    min-width: 20em;
+    border-radius: 8px;
+    box-shadow: 2px 3px 10px 4px var(--shadow-color);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  
+  .cardText, .cardHoverText {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* font-size: 24px;*/
+    font-weight: bold;
+    transition: opacity 0.5s;
+  }
+  
+  .cardText {
+    opacity: 1;
+    font-size: 42px;
+  }
+  
+  .cardHoverText {
+    opacity: 0;
+    /*background-image: url(https://picsum.photos/1688/480?grayscale);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    box-shadow: -3px -3px 20px 2px inset;
+    
+  }
+  .cardHoverText >span {
+    filter: blur(0);
+    font-size: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(61, 61, 61, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .projectCard:hover .cardText {
+    opacity: 0;
+  }
+  
+  .projectCard:hover .cardHoverText {
+    opacity: 1;
+  }
+  .background-image {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s;
+    filter: grayscale(1);
+  }
+  
+  .projectCard:hover .background-image {
+    opacity: 1;
+    filter: blur(5px) grayscale(1);
+  }
