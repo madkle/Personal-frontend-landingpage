@@ -2,11 +2,12 @@
   margin: 0;
 }
 :root {
-  --Primary-color: #3d005a;
+  --MainPurple-color: #3d005a;
+  --Primary-color: #20002e;
   --CTA-color: #674afc;
   --Text-color: #efefef;
-  --navbar-color: #34014c;
-  --shadow-color: #5e0089;
+  --navbar-color: #1a0423;
+  --shadow-color: #3d0a54;
 }
 
 body {
@@ -38,13 +39,6 @@ main {
   display: flex;
   gap: 80px;
 }
-footer {
-  min-height: 100px;
-  padding: 16px;
-  padding-left: 85px;
-  background-color: var(--navbar-color);
-  z-index: 1;
-}
 #sideMenu {
   background-color: var(--navbar-color);
   width: 80px;
@@ -64,54 +58,6 @@ footer {
   min-width: 1180px;
   width: 100%;
 }
-#content:last-child{
-    margin-bottom: 50px;
-}
-#heroSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 100px;
-}
-#mainImage {
-  min-width: 590px;
-  min-height: 550px;
-  background-color: var(--Text-color);
-}
-#heroContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 590px;
-  min-height: 550px;
-  gap: 16px;
-}
-.buttonContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.smallText {
-  font-size: 43px;
-  margin-right: 200px;
-}
-.bigText {
-  font-size: 86px;
-  font-weight: bolder;
-}
-
-#programSection {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-#programSection > div {
-  border: black solid 1px;
-}
-#programSection > div > span {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  align-items: center;
+#content:last-child {
+  margin-bottom: 50px;
 }

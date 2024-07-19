@@ -1,0 +1,20 @@
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: var(--navbar-color);
+  z-index: 1;
+}
+footer span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+footer span:first-child {
+  width: 80px;
+}
+footer span:last-child {
+  width: 100%;
+  box-shadow: 10px -5px 20px 0px var(--shadow-color);
+  border-top: 1px var(--shadow-color) solid;
+}

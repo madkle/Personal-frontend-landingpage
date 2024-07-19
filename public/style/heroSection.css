@@ -1,0 +1,35 @@
+#heroSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10em;
+  width: 100%;
+  margin: 100px 0;
+}
+#mainImage {
+  width: 550px;
+  height: 550px;
+  border-radius: 45px;
+  box-shadow: 6px 11px 20px 10px var(--shadow-color);
+}
+#heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 590px;
+  min-height: 550px;
+  gap: 16px;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.smallText {
+  font-size: 43px;
+  margin-right: 200px;
+}
+.bigText {
+  font-size: 86px;
+  font-weight: bolder;
+}

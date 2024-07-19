@@ -7,7 +7,7 @@
   
   .projectCard{
     position: relative;
-    min-height: 35em;
+    min-height: 30em;
     min-width: 20em;
     border-radius: 8px;
     box-shadow: 2px 3px 10px 4px var(--shadow-color);
