@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --black: #030303;
+      --highlight: #1d1d1d;
+      --selected: #383838;
+      --text: #fefefe;
+      --grey: #292929;
+    }
+    #header {
+      grid-area: header;
+      padding: 12px 16px;
+    }
+    #sidebar {
+      grid-area: sidebar;
+    }
+    #content {
+      grid-area: mainContent;
+    }
+    #playlist {
+      grid-area: playlist;
+    }
+    #mediaControl {
+      grid-area: controls;
+    }
+
+    body {
+      color: var(--text);
+    }
+
+    main {
+      height: 100vh;
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "sidebar mainContent playlist"
+        "controls controls controls";
+      grid-template-rows: 4em 1fr 6em;
+      grid-template-columns: 0.5fr 1fr 0.5fr;
+      background-color: var(--black);
+    }
+    main > section {
+      border: solid 1px var(--grey);
+      padding: 8px;
+    }
+    @media (max-width: 900px) {
+      main {
+        grid-template-areas:
+          "header header "
+          "sidebar mainContent "
+          "sidebar playlist "
+          "controls controls";
+
+        grid-template-rows: 4em 1fr 0.4fr 4em;
+        grid-template-columns: 6em 1fr;
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <section id="header">1</section>
+      <section id="sidebar">2</section>
+      <section id="content">3</section>
+      <section id="playlist">4</section>
+      <section id="mediaControl">5</section>
+    </main>
+  </body>
+</html>
